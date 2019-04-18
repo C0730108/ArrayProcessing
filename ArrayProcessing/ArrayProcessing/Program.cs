@@ -15,21 +15,23 @@ namespace ArrayProcessing
 
             printRepeating(arr, arr_size);
         }
-    
 
-    static void printRepeating(int[] arr, int size)
-    {
-        int i, j;
-        Console.WriteLine("Element which occur three times");
-        for (i = 0; i < size; i++) ;
+
+        static void printRepeating(int[] arr, int size)
         {
-            for (j = 0; j < size; j++) ;
+            int i, j;
+            Console.WriteLine("Element which occur three times");
+            for (i = 0; i < size; i++) 
             {
-                if (arr[i] == arr[j])
-                    Console.Write(arr[i] + " ");
+                for (j = i+1 ; j < size; j++) 
+                {
+                    if (arr[i] == arr[j])
+                        Console.WriteLine(arr[i] + " ");
+                }
             }
+
         }
-     
     }
+}
 
 
